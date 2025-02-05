@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0PFqBkPTgwY=",
+  "dgSpecHash": "QcejLi2IJDI=",
   "success": true,
-  "projectFilePath": "/Users/zoea/Projects/Learning_Notes/LeetCodeCamp/Microservices/crocheties/src/AuctionService/AuctionService.csproj",
+  "projectFilePath": "/Users/zoea/Projects/crocheties/src/AuctionService/AuctionService.csproj",
   "expectedPackageFiles": [
     "/Users/zoea/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/zoea/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
