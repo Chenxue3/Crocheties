@@ -1,0 +1,22 @@
+# DOTNET git ignore file
+# Created by https://www.gitignore.io/api/dotnet
+
+### VisualStudio template
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# 忽略 node_modules 目录
+node_modules/
+
+# 忽略日志文件
+*.log
+
+# 忽略操作系统生成的文件
+.DS_Store
