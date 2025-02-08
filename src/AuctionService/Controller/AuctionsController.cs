@@ -14,8 +14,8 @@ namespace AuctionService.Controller;
 [Route("api/auctions")]
 public class AuctionsController : ControllerBase
 {
-    private readonly AuctionDbContext _context;
-    private readonly IMapper _mapper;
+    private readonly AuctionDbContext _context; // DbContext is used to interact with the database，这是一个数据库上下文
+    private readonly IMapper _mapper; // AutoMapper is used to map between different types of objects, 这是一个对象映射器，用来映射不同类型的对象
     public AuctionsController(AuctionDbContext context, IMapper mapper)
     {
         _context = context;
@@ -69,6 +69,38 @@ public class AuctionsController : ControllerBase
         return CreatedAtAction(nameof(GetAuctionById), new {auction.Id}, _mapper.Map<AuctionDto>(auction));
 
         
+    }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult> UpdateAuction(Guid id, UpdateAuctionDto updateAuctionDto)
+    {
+        //这是一个更新操作，所以首先要找到要更新的对象
+        var auction = await _context.Auctions.Include(x => x.Item).FirstOrDefaultAsync(x => x.Id == id);
+
+        if (auction == null)
+        {
+            return NotFound(); //如果找不到要更新的对象，返回404
+        }
+        //TODO: check seller is the current user
+
+        //将 updateAuctionDto 映射到 auction 对象, update the auction object with the updateAuctionDto
+
+        auction.Item.Make = updateAuctionDto.Make ?? auction.Item.Make;//如果 updateAuctionDto.Make 为 null，则不更新 auction.Item.Make
+        auction.Item.Model = updateAuctionDto.Model ?? auction.Item.Model;
+        auction.Item.Year = updateAuctionDto.Year ?? auction.Item.Year;
+        auction.Item.Color = updateAuctionDto.Color ?? auction.Item.Color;
+        auction.Item.Mileage = updateAuctionDto.Mileage ?? auction.Item.Mileage;
+        auction.Item.Year = updateAuctionDto.Year ?? auction.Item.Year;
+        
+
+        var result = await _context.SaveChangesAsync() > 0;
+
+        if (!result)
+        {
+            return BadRequest("Failed to update auction and save to database");
+        }
+
+        return Ok();
     }
 
 }
