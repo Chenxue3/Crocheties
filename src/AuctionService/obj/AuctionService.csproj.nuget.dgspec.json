@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/zoea/Projects/Learning_Notes/LeetCodeCamp/Microservices/crocheties/src/AuctionService/AuctionService.csproj": {}
+    "/Users/zoea/Projects/crocheties/src/AuctionService/AuctionService.csproj": {}
   },
   "projects": {
-    "/Users/zoea/Projects/Learning_Notes/LeetCodeCamp/Microservices/crocheties/src/AuctionService/AuctionService.csproj": {
+    "/Users/zoea/Projects/crocheties/src/AuctionService/AuctionService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/zoea/Projects/Learning_Notes/LeetCodeCamp/Microservices/crocheties/src/AuctionService/AuctionService.csproj",
+        "projectUniqueName": "/Users/zoea/Projects/crocheties/src/AuctionService/AuctionService.csproj",
         "projectName": "AuctionService",
-        "projectPath": "/Users/zoea/Projects/Learning_Notes/LeetCodeCamp/Microservices/crocheties/src/AuctionService/AuctionService.csproj",
+        "projectPath": "/Users/zoea/Projects/crocheties/src/AuctionService/AuctionService.csproj",
         "packagesPath": "/Users/zoea/.nuget/packages/",
-        "outputPath": "/Users/zoea/Projects/Learning_Notes/LeetCodeCamp/Microservices/crocheties/src/AuctionService/obj/",
+        "outputPath": "/Users/zoea/Projects/crocheties/src/AuctionService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/zoea/.nuget/NuGet/NuGet.Config"
